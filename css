@@ -1,0 +1,35 @@
+/* 1. ปรับแต่งโทนสีหลักของเว็บ (Theme Colors) */
+:root {
+    --bg-main: #f6f8fa;       /* สีพื้นหลังของเว็บ (เทาอ่อนสไตล์ GitHub) */
+    --bg-card: #ffffff;       /* สีพื้นหลังของการ์ดผลงาน (ขาว) */
+    --text-primary: #24292e;  /* สีตัวอักษรหลัก (ดำเข้ม) */
+    --text-muted: #586069;    /* สีตัวอักษรรอง (เทา) */
+    --accent-color: #0366d6;  /* สีฟ้าลิงก์และหัวข้อ */
+    --success-btn: #2ea44f;   /* สีเขียวปุ่มกด */
+}
+
+/* 2. เพิ่มเอฟเฟกต์ให้การ์ดโปรเจกต์ดูมีมิติ (Hover Effect) */
+.project-card {
+    background: var(--bg-card);
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* เพิ่มความนุ่มนวลเวลาเอาเมาส์ไปชี้ */
+}
+
+/* เมื่อผู้ใช้เอาเมาส์วางบนกล่องผลงาน กล่องจะลอยขึ้นเล็กน้อย */
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-color: var(--accent-color);
+}
+
+/* 3. ปรับแต่งแถบเลื่อน (Scrollbar) สำหรับกล่องโค้ดที่ยาวเกินหน้าจอ */
+.code-preview::-webkit-scrollbar {
+    height: 6px;
+}
+.code-preview::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 3px;
+}
